@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>The MSH segment</h1>
+        <div style="text-align: left; font-size: 3.1vh; color: yellow">
+            MSH|^~\&amp;|GHH LAB|ELAB-3|GHH OE|BLDG4|200202150930||ORU^R01|CNTRL-3456|P|2.4&lt;CR&gt;
+        </div>
+        <ul>
+            <li>
+                Other important information which may be obtained from the MSH segment:
+                <ul class="sub">
+                    <li>
+                        MSH-3 (sending application), MSH-4 (sending facility),
+                        MSH-5 (receiving application), MSH-6 (receiving facility).
+                        May be informative when appropriately configured.
+                    </li>
+                    <li>
+                        MSH-11 specifies the HL7 version and is important for interoperability
+                        across different versions.
+                    </li>
+                </ul>
+            </li>
+            <li>MSH is the only segment that is mandatory in all HL7 messages.</li>
+            <li>
+                As explained before, the MSH-9 field (here "ORU^R01") declares the message type
+                and must be read to properly parse all following segments.
+                There are over 100 different HL7 message types, categorized by type (the first
+                three letters, here ORU stands for "observation result") and further subindexed
+                (here R01).
+            </li>
+        </ul>
+    </body>
+</html>

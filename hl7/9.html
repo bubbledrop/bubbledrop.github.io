@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>Interoperability</h1>
+        <ul style="font-size: 3.5vh">
+            <li>
+                The HL7 standard specifies simple interoperability guidelines, such as
+                the use of Z segments and additional fields.
+            </li>
+            <li>
+                Upon encountering a newer version of HL7, an HL7 device should: (1) Ignore
+                any incoming messages not supported by its own version of HL7. (2) Within
+                supported messages, ignore segments it has not had defined or that are out of order.
+                (3) Within supported segments, ignore fields past the original specification of the
+                segment in the context of the current message.
+            </li>
+            <li>
+                In practice, many vendors implement HL7 differently (without respecting
+                interoperability guidelines like Z-objects).
+            </li>
+            <li>
+                Most healthcare institutions employ an HL7 translator, called an
+                <strong>interface engine</strong> to bridge the language gap between the
+                different devices.
+            </li>
+            <li>
+                The interface engine must be updated to understand every new device,
+                and forwarding rules established.
+            </li>
+        </ul>
+    </body>
+</html>

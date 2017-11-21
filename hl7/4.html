@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>Message structure</h1>
+        <ul style="font-size: 3.5vh">
+            <li>
+                An HL7 message is divided into <strong>segments</strong>,
+                separated by the &lt;CR&gt; (ASCII 0x0d) character.
+                Every segment starts with a 3 character acronym [A-Z][A-Z0-9]{2},
+                the <strong>segment ID</strong>.
+            </li>
+            <li>
+                The first segment of the message is special and is called the <strong>header</strong>.
+                It begins with the letters MSH.
+            </li>
+            <li>
+                The MSH part of the header is immediately followed by 5 characters
+                called the <strong>separators</strong> or <strong>delimiters</strong>.
+                They can be customized, but their recommended and most commonly used values
+                are "|^~\&amp;" (minus the quotes).
+            </li>
+            <li>
+                The first character is called the <strong>field/composite delimiter</strong>.
+                The second is called the <strong>component delimiter</strong>.
+                The third is called the <strong>repetition separator</strong>.
+                The fourth is called the <strong>escape character</strong>.
+                The fifth is called the <strong>sub-component separator</strong>.
+                The standard defines no further subdivision after sub-components.
+            </li>
+        </ul>
+    </body>
+</html>

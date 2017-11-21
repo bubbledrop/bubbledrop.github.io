@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>What is HL7 (cont.)</h1>
+        <ul style="font-size: 3.5vh">
+            <li>
+                Some widely pervasive HL7 standards are:
+                <ul class="sub">
+                    <li>v2.x messaging standard (textual). Currently most prevalent in healthcare institutions.</li>
+                    <li>v3 messaging standard (XML-based). Supposedly abandoned by many vendors.</li>
+                    <li>SPL (Structured Product Labeling) - info about medication, based on v3.</li>
+                    <li>FHIR (Fast Healthcare Interoperability Resources) - draft for a more modern messaging standard.</li>
+                </ul>
+            </li>
+            <li>
+                <img src="courier.png" align="right" height="150vh" />
+                The HL7 messaging standards will be of greatest interest to us. These can be thought
+                of as healthcare couriers. That is, events happening in the physical medical world
+                will trigger HL7 messages when they need to be communicated between devices: a measurement
+                taken, a patient admitted into one of the departments, medication perscribed etc.
+                It is an event-driven protocol.
+            </li>
+            <li>
+                We expect the vast majority of such messaging traffic encountered within hospital networks
+                to use the v2.x messaging standard, and we will therefore lend ourselves to the common
+                abuse of terminology and use the name "HL7" to refer to it unless otherwise noted.
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>Message structure (cont.)</h1>
+        <ul style="font-size: 3vh">
+            <li>
+                The fields are labeled per segment. In the header (MSH segment),
+                the letters MSH are the first field, and may therefore be treated as MSH-0.
+                The field separator (the pipe symbol from before) is MSH-1, and the
+                remaining delimiters (^~\&amp;) are MSH-2.
+            </li>
+            <li>
+                A typical header looks something like:
+                <div style="text-align: left; font-size: 3vh; color: yellow">
+                    MSH|^~\&amp;|GHH LAB|ELAB-3|GHH OE|BLDG4|200202150930||ORU^R01|CNTRL-3456|P|2.4&lt;CR&gt;
+                </div>
+                Note that the security field (MSH-8) is empty ("unpopulated"), which in general is valid.
+                MSH-9 is the message type field, which determines which segments
+                one should expect in the remainder of the message, what their
+                order will be and what fields they will contain. The order and
+                data types of the fields in every kind of HL7 message are defined
+                by the standard.
+            </li>
+            <li>
+                Segments can either be solitary or part of a <strong>segment group</strong>.
+                Solitaries or groups are defined as either mandatory, [optional], {repeating}
+                or [{optional and repeating}] (0 or more). This kind of notation is called
+                <strong>segment notation</strong>. A valid message must adhere to both the
+                sequential order of the segments and the quantitative specifications.
+            </li>
+            <li>
+                Segments starting with the letter Z are called <strong>Z segments</strong> and
+                are reserved by the protocol for extensions. Proprietary protocols based on HL7 are
+                encouraged to use Z segments for their superstandard data. Similarly, one can
+                extend a segment with additional fields, provided they appear at the end of the
+                standard-specified segment.
+            </li>
+        </ul>
+    </body>
+</html>

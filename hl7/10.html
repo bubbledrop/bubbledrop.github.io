@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>Messaging standard v3</h1>
+        <ul class="sub">
+            <li>Didn't look too much into it, rumored to not be very widespread.</li>
+            <li>An XML based standard (=also textual).</li>
+            <li>Completely incompatible with v2.x.</li>
+            <li>Serves as the basis for a bunch of other standards such as CDA and SPL.</li>
+        </ul>
+        <div style="margin-left: 50vh; font-size: 1.5vh; white-space: pre">
+ &lt;POLB_IN224200 ITSVersion="XML_1.0" xmlns="urn:hl7-org:v3"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;  
+ &lt;id root="2.16.840.1.113883.19.1122.7" extension="CNTRL-3456"/&gt;
+ &lt;creationTime value="200202150930-0400"/&gt;
+ &lt;!-- The version of the datatypes/RIM/vocabulary used is that of May 2006 --&gt;
+ &lt;versionCode code="2006-05"/&gt;
+ &lt;!-- interaction id= Observation Event Complete, w/o Receiver Responsibilities --&gt;
+ &lt;interactionId root="2.16.840.1.113883.1.6" extension="POLB_IN224200"/&gt;
+ &lt;processingCode code="P"/&gt;
+ &lt;processingModeCode nullFlavor="OTH"/&gt;
+ &lt;acceptAckCode code="ER"/&gt;
+ &lt;receiver typeCode="RCV"&gt;
+   &lt;device classCode="DEV" determinerCode="INSTANCE"&gt;
+     &lt;id extension="GHH LAB" root="2.16.840.1.113883.19.1122.1"/&gt;
+     &lt;asLocatedEntity classCode="LOCE"&gt;
+       &lt;location classCode="PLC" determinerCode="INSTANCE"&gt;
+         &lt;id root="2.16.840.1.113883.19.1122.2" extension="ELAB-3"/&gt;
+       &lt;/location&gt;
+     &lt;/asLocatedEntity&gt;
+   &lt;/device&gt;
+ &lt;/receiver&gt;
+ &lt;sender typeCode="SND"&gt;
+   &lt;device classCode="DEV" determinerCode="INSTANCE"&gt;
+     &lt;id root="2.16.840.1.113883.19.1122.1" extension="GHH OE"/&gt;
+     &lt;asLocatedEntity classCode="LOCE"&gt;
+       &lt;location classCode="PLC" determinerCode="INSTANCE"&gt;
+         &lt;id root="2.16.840.1.113883.19.1122.2" extension="BLDG24"/&gt;
+       &lt;/location&gt;
+     &lt;/asLocatedEntity&gt;
+   &lt;/device&gt;
+ &lt;/sender&gt;
+ &lt;! –- Trigger Event Control Act &amp; Domain Content -- &gt;
+ &lt;/POLB_IN224200&gt;
+            </div>
+    </body>
+</html>

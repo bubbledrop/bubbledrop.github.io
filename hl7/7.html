@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>Interesting message types</h1>
+        <ul>
+            <li>
+                ADT - admission/discharge/transfer of patients in different departments.
+                There are 51 types of ADT messages, and they are amongst the most commonly
+                seen inside hospitals.
+            </li>
+            <li>
+                ORM and ORU - messages for observation requests "take a measurement" and
+                observation results (which may be spontaneous or triggered by request.
+                Specifically the OBX segments of ORU^R01 messages contain data about the
+                measurement itself which can often be used to recognize the type of device.
+            </li>
+            <li>
+                DFT - financial transactions. SIU - scheduling information. ACK - should be
+                returned after every message, contains only an MSH segment.
+            </li>
+        </ul>
+    </body>
+</html>

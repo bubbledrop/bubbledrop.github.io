@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            presentation
+        </title>
+    </head>
+    <body>
+        <h1>MLLP</h1>
+        <ul>
+            <li>MLLP stands for Minimal Lower Level Protocol</li>
+            <li>Straightforward encapsulation: &lt;SB&gt;HL7 message&lt;EB&gt;&lt;CR&gt;</li>
+            <li>The newer version defines some reliability measures:
+                <ul class="sub">
+                    <li>The receiver acks every received message with the format &lt;SB&gt;&lt;ACK&gt;&lt;EB&gt;&lt;CR&gt;.</li>
+                    <li>A NAK is also possible in the same format.</li>
+                    <li>A new message will not be sent until an ack is received for the previous message.</li>
+                </ul>
+            </li>
+            <li>In ASCII: SB = 0x0b, EB = 0x1c ACK = 0x06, NAK = 0x15.</li>
+        </ul>
+    </body>
+</html>
