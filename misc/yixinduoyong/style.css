@@ -11,7 +11,7 @@ body{
     text-align: justify;
 }
 div.main{
-    background-image: url("nobg.jpg");
+    background-image: url("bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;
@@ -24,8 +24,17 @@ div.main{
 }
 iframe.hidden{height: 0%; width: 0%; display: none}
 
-h1{font-size: 7vh; text-align: center}
+h1{font-size: 7vh; text-align: center; color: blue}
 div.latex{display: inline-block}
 .sub{font-size: 3vh; margin: 0 0 1vh 0}
 /* explicit margin-bottom for ul will now stretch it: */
 li {margin-bottom: inherit}
+
+table.global {
+    height: 100%;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
